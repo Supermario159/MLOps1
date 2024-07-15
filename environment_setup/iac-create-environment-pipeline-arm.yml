@@ -14,7 +14,7 @@ stages:
       vmImage: 'ubuntu-latest'
     timeoutInMinutes: 0
     steps:
-    - task: DownloadGitHubRelease@0
+    - task: GitHubComment@0
       inputs:
         azureSubscription: '$(Azure_RM_SVC__Connection)'
         action: 'Create Or Update Resource Group'
