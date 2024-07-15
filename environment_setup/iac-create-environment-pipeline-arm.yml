@@ -14,14 +14,14 @@ stages:
       vmImage: 'ubuntu-latest'
     timeoutInMinutes: 0
     steps:
-    - task: AzureResourceGroupDeployment@2
+    - task: GitHubRelease@1
       inputs:
-        azureSubscription: '$(SuC)'
+        azureSubscription: '$(Azure_RM_SVC__Connection)'
         action: 'Create Or Update Resource Group'
-        resourceGroupName: '$(Sudip Chakraborty-1)'
-        location: $(Kolkata)
+        resourceGroupName: '$(Resource_Group)'
+        location: $(Location)
         templateLocation: 'Linked artifact'
         csmFile: '$(Build.SourcesDirectory)/environment_setup/cloud-environment.json'
-        overrideParameters: '-baseName $(Sudip Chakraborty_Project1) -location $(Kolkata) -workspace $(SudipC_MLOps)'
+        overrideParameters: '-baseName $(BASE_NAME) -location $(Location) -workspace $(Workspace_Name)'
         deploymentMode: 'Incremental'
       displayName: 'Deploy OH resources to Azure'
