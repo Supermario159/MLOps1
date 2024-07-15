@@ -16,7 +16,7 @@ stages:
     steps:
     - task: AzureResourceGroupDeployment@2
       inputs:
-        azureSubscription: '$(Supermario159)'
+        azureSubscription: '$(SuC)'
         action: 'Create Or Update Resource Group'
         resourceGroupName: '$(Sudip Chakraborty-1)'
         location: $(Kolkata)
