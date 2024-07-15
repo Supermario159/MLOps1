@@ -22,6 +22,6 @@ stages:
         location: $(Kolkata)
         templateLocation: 'Linked artifact'
         csmFile: '$(Build.SourcesDirectory)/environment_setup/cloud-environment.json'
-        overrideParameters: '-baseName $(BASE_NAME) -location $(LOCATION) -workspace $(WORKSPACE_NAME)'
+        overrideParameters: '-baseName $(Sudip Chakraborty_Project1) -location $(Kolkata) -workspace $(SudipC_MLOps)'
         deploymentMode: 'Incremental'
       displayName: 'Deploy OH resources to Azure'
